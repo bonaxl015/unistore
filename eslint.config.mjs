@@ -11,9 +11,14 @@ const compat = new FlatCompat({
 });
 
 const eslintConfig = [
-  ...compat.extends('next/core-web-vitals', 'next/typescript'),
+  ...compat.extends(
+    'next/core-web-vitals',
+    'next/typescript',
+    'plugin:prettier/recommended'
+  ),
   {
     rules: {
+      'prettier/prettier': 'error',
       'react/display-name': 'off',
       'no-multiple-empty-lines': ['error', { max: 1 }],
       'no-mixed-spaces-and-tabs': ['error', 'smart-tabs'],
