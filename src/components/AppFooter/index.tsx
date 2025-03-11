@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { FaFacebook, FaTwitter, FaInstagram } from 'react-icons/fa';
+
 import { navigationLinks } from '@/constants/navigationList';
 
 const Footer = () => {

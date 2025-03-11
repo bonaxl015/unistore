@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { FC } from 'react';
+
 import { navigationLinks } from '@/constants/navigationList';
 
 const AppNavbar: FC = () => {
