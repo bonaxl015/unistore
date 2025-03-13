@@ -1,9 +1,11 @@
 import Link from 'next/link';
 import { FaFacebook, FaTwitter, FaInstagram } from 'react-icons/fa';
 
+import { FC } from 'react';
+
 import { navigationLinks } from '@/constants/navigationList';
 
-const Footer = () => {
+const Footer: FC = () => {
   const socialMediaLinks = [
     {
       key: 'facebook',
