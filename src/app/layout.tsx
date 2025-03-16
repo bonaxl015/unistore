@@ -1,7 +1,7 @@
 import { ReactNode } from 'react';
 import type { Metadata } from 'next';
 import { Poppins } from 'next/font/google';
-import './globals.css';
+import '../styles/globals.css';
 
 import AppNavbar from '@/components/AppNavBar';
 import AppBody from '@/components/AppBody';
