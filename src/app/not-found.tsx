@@ -1,16 +1,16 @@
 import Link from 'next/link';
 import { FC } from 'react';
 
-import Button from '@/components/Button';
+import { Button } from '@/components/Button';
 
 const NotFound: FC = () => {
   return (
-    <div className="flex flex-col items-center justify-center p-6 h-full text-center">
+    <div className="flex flex-col items-center justify-center p-6 mt-6 h-full text-center">
       <h1 className="text-9xl font-extrabold tracking-widest animate-bounce">
         404
       </h1>
       <h2 className="mt-4 text-3xl font-bold">Oops! Page Not Found</h2>
-      <p className="mt-2 text-lg">
+      <p className="mt-2 text-lg mb-4">
         The page you are looking for might have been removed, had its name
         changed, or is temporarily unavailable.
       </p>

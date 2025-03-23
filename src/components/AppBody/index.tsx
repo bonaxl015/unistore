@@ -5,9 +5,7 @@ interface AppBodyProps {
 }
 
 const AppBody: FC<AppBodyProps> = ({ children }) => {
-  return (
-    <div className="flex-1 flex flex-col container mx-auto p-4">{children}</div>
-  );
+  return <div className="flex-1 flex flex-col">{children}</div>;
 };
 
 export default AppBody;

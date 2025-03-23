@@ -1,9 +1,6 @@
-import Link from 'next/link';
 import { FaFacebook, FaTwitter, FaInstagram } from 'react-icons/fa';
 
 import { FC } from 'react';
-
-import { navigationLinks } from '@/constants/navigationList';
 
 const Footer: FC = () => {
   const socialMediaLinks = [
@@ -25,24 +22,13 @@ const Footer: FC = () => {
   ];
 
   return (
-    <footer className="bg-gradient-to-r from-red-500 to-pink-500 backdrop-blur-lg shadow-md text-white py-6 mt-12">
+    <footer className="bg-gradient-to-r from-red-500 to-pink-500 backdrop-blur-lg shadow-md text-white py-6">
       <div className="container mx-auto flex flex-col items-center space-y-4">
         {/* Brand & Slogan */}
         <h2 className="text-2xl font-bold tracking-wide">UniStore</h2>
         <p className="text-gray-200">
           Creating the future, one step at a time.
         </p>
-
-        {/* Navigation Links */}
-        <div className="flex space-x-6">
-          {navigationLinks.map((item) => (
-            <Link key={item.key} href={item.href}>
-              <span className="cursor-pointer text-lg transition-all duration-300 hover:text-gray-300 hover:scale-105">
-                {item.label}
-              </span>
-            </Link>
-          ))}
-        </div>
 
         {/* Social Media Links */}
         <div className="flex space-x-4">
