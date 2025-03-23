@@ -5,7 +5,10 @@ import { navigationLinks } from '@/constants/navigationList';
 
 const AppNavbar: FC = () => {
   return (
-    <nav className="w-full bg-gradient-to-r from-red-500 to-pink-500 backdrop-blur-lg shadow-md">
+    <nav
+      aria-label="Navigation Bar"
+      className="w-full bg-gradient-to-r from-red-500 to-pink-500 backdrop-blur-lg shadow-md"
+    >
       <div className="container mx-auto flex items-center justify-between p-4">
         {/* Logo & Brand Name */}
         <div className="flex items-center space-x-3">

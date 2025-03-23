@@ -22,7 +22,10 @@ const Footer: FC = () => {
   ];
 
   return (
-    <footer className="bg-gradient-to-r from-red-500 to-pink-500 backdrop-blur-lg shadow-md text-white py-6">
+    <footer
+      aria-label="Footer"
+      className="bg-gradient-to-r from-red-500 to-pink-500 backdrop-blur-lg shadow-md text-white py-6"
+    >
       <div className="container mx-auto flex flex-col items-center space-y-4">
         {/* Brand & Slogan */}
         <h2 className="text-2xl font-bold tracking-wide">UniStore</h2>
@@ -36,6 +39,7 @@ const Footer: FC = () => {
             <a
               key={item.key}
               href={item.href}
+              aria-label={`${item.key} icon`}
               target="_blank"
               rel="noopener noreferrer"
               className="hover:scale-110 transition-transform duration-300"
