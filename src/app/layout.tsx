@@ -20,12 +20,12 @@ const poppins = Poppins({
 export default function RootLayout({
   children
 }: Readonly<{
-  children: ReactNode;
+  children?: ReactNode;
 }>) {
   return (
     <html lang="en">
       <body className={poppins.className}>
-        <div className="min-h-screen flex flex-col">
+        <div aria-label="Home Layout" className="min-h-screen flex flex-col">
           <AppNavbar />
           <AppBody>{children}</AppBody>
           <AppFooter />
