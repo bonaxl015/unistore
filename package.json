@@ -3,6 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "cy:open": "cypress open",
+    "cy:run": "cypress run --browser chrome",
     "dev": "next dev --turbopack",
     "build": "next build",
     "start": "node .next/standalone/server.js",
@@ -40,6 +42,8 @@
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "babel-jest": "^29.7.0",
+    "cypress": "^14.2.0",
+    "cypress-fail-fast": "^7.1.1",
     "eslint": "^9",
     "eslint-config-next": "15.2.1",
     "eslint-config-prettier": "^10.1.1",
