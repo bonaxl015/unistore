@@ -24,6 +24,7 @@ const eslintConfig = [
       'no-mixed-spaces-and-tabs': ['error', 'smart-tabs'],
       'testing-library/prefer-screen-queries': 'off',
       '@typescript-eslint/no-empty-function': 'off',
+      '@typescript-eslint/no-explicit-any': 'warn',
       'import/order': [
         'error',
         {

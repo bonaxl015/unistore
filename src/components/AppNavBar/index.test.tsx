@@ -1,4 +1,6 @@
 import { render, screen } from '@testing-library/react';
+import { ReactNode } from 'react';
+import React from 'react';
 
 import { navigationLinks } from '@/constants/navigationList';
 
@@ -7,7 +9,7 @@ import AppNavbar from '.';
 jest.mock(
   'next/link',
   () =>
-    ({ children, href }: { children: React.ReactNode; href: string }) => (
+    ({ children, href }: { children: ReactNode; href: string }) => (
       <a href={href} data-testid="nav-link">
         {children}
       </a>
