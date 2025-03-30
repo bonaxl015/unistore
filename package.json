@@ -5,6 +5,9 @@
   "scripts": {
     "cy:open": "cypress open",
     "cy:run": "cypress run --browser chrome",
+    "db:generate": "drizzle-kit generate",
+    "db:migrate": "tsx ./src/db/migrate.ts",
+    "db:push": "drizzle-kit push",
     "dev": "next dev --turbopack",
     "build": "next build",
     "start": "node .next/standalone/server.js",
@@ -18,10 +21,13 @@
     "@radix-ui/react-slot": "^1.1.2",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
+    "drizzle-kit": "^0.30.6",
+    "drizzle-orm": "^0.41.0",
     "embla-carousel-autoplay": "^8.5.2",
     "embla-carousel-react": "^8.5.2",
     "lucide-react": "^0.482.0",
     "next": "15.2.1",
+    "postgres": "^3.4.5",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-icons": "^5.5.0",
@@ -44,6 +50,7 @@
     "babel-jest": "^29.7.0",
     "cypress": "^14.2.0",
     "cypress-fail-fast": "^7.1.1",
+    "dotenv": "^16.4.7",
     "eslint": "^9",
     "eslint-config-next": "15.2.1",
     "eslint-config-prettier": "^10.1.1",
@@ -56,6 +63,7 @@
     "prettier": "^3.5.3",
     "tailwindcss": "^4",
     "ts-jest": "^29.2.6",
+    "tsx": "^4.19.3",
     "typescript": "^5"
   }
 }
