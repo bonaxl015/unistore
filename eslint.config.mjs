@@ -17,6 +17,14 @@ const eslintConfig = [
     'plugin:prettier/recommended'
   ),
   {
+    settings: {
+      'import/resolver': {
+        typescript: {
+          alwaysTryTypes: true,
+          project: './tsconfig.json'
+        }
+      }
+    },
     rules: {
       'prettier/prettier': 'error',
       'react/display-name': 'off',
