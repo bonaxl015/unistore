@@ -8,8 +8,8 @@ import AppBody from '@/components/AppBody';
 import AppFooter from '@/components/AppFooter';
 
 export const metadata: Metadata = {
-  title: 'Home | Unistore',
-  description: 'Unistore home page'
+  title: 'Home | Spacebook',
+  description: 'Spacebook home page'
 };
 
 const poppins = Poppins({

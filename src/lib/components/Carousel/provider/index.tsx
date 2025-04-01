@@ -5,7 +5,6 @@ import {
   KeyboardEvent,
   useEffect
 } from 'react';
-
 import useEmblaCarousel from 'embla-carousel-react';
 
 import { cn } from '@/utils';

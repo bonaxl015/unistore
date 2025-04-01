@@ -13,7 +13,7 @@ const AppNavbar: FC = () => {
         {/* Logo & Brand Name */}
         <div className="flex items-center space-x-3">
           <span className="text-2xl font-bold text-white tracking-wide">
-            UniStore
+            Spacebook
           </span>
         </div>
 

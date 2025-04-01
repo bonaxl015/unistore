@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import { FC } from 'react';
 
-import { Button } from '@/components/Button';
+import { Button } from '@/lib/components/Button';
 
 const NotFound: FC = () => {
   return (

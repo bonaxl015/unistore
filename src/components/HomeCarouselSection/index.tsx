@@ -4,18 +4,17 @@ import { FC, useRef } from 'react';
 import Autoplay from 'embla-carousel-autoplay';
 import Image from 'next/image';
 
-import productList from '@/constants/homePageProductList';
-
-import styles from './styles.module.css';
-
 import {
   CarouselProvider,
   CarouselContent,
   CarouselItem,
   CarouselNext,
   CarouselPrevious
-} from '../Carousel';
-import { Button } from '../Button';
+} from '@/lib/components/Carousel';
+import { Button } from '@/lib/components/Button';
+import productList from '@/constants/homePageProductList';
+
+import styles from './styles.module.css';
 
 const HomeCarouselSection: FC = () => {
   const plugin = useRef(Autoplay({ delay: 2000 }));
@@ -35,10 +34,9 @@ const HomeCarouselSection: FC = () => {
                 <Image
                   src={product.imageUrl}
                   alt="Product"
-                  width={9}
-                  height={16}
-                  layout="responsive"
-                  objectFit="cover"
+                  width={300}
+                  height={300}
+                  priority
                   className={`rounded-md ${styles.cardImage}`}
                 />
               </div>

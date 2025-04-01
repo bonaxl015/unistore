@@ -6,7 +6,7 @@ import Footer from '.';
 describe('Given Footer component', () => {
   it('renders the brand name', () => {
     render(<Footer />);
-    expect(screen.getByText('UniStore')).toBeInTheDocument();
+    expect(screen.getByText('Spacebook')).toBeInTheDocument();
   });
 
   it('renders the slogan', () => {
@@ -49,7 +49,7 @@ describe('Given Footer component', () => {
     render(<Footer />);
     const currentYear = new Date().getFullYear();
     expect(
-      screen.getByText(`© ${currentYear} UniStore. All rights reserved.`)
+      screen.getByText(`© ${currentYear} Spacebook. All rights reserved.`)
     ).toBeInTheDocument();
   });
 

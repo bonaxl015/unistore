@@ -1,6 +1,6 @@
 import { FC } from 'react';
 
-import { Button } from '@/components/Button';
+import { Button } from '@/lib/components/Button';
 import HomeCarouselSection from '@/components/HomeCarouselSection';
 
 const homeBackgroundImage =
@@ -17,7 +17,7 @@ const HomePage: FC = () => {
         />
         <div className="relative z-10 text-white">
           <h1 className="text-5xl md:text-6xl font-bold">
-            Welcome to UniStore
+            Welcome to Spacebook
           </h1>
           <p className="mt-4 text-lg md:text-xl">
             Your one-stop shop for premium products

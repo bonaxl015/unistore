@@ -1,11 +1,11 @@
-import unistore from '../../pageObjects';
+import spacebook from '../../pageObjects';
 
-describe('When I open UniStore website', () => {
+describe('When I open Spacebook website', () => {
   beforeEach(() => {
-    cy.loadUnistore();
+    cy.loadSpacebook();
   });
 
   it('should display the home page by default', () => {
-    unistore.homePage.container.should('be.visible');
+    spacebook.homePage.container.should('be.visible');
   });
 });

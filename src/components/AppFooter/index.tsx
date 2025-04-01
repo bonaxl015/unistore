@@ -28,7 +28,7 @@ const Footer: FC = () => {
     >
       <div className="container mx-auto flex flex-col items-center space-y-4">
         {/* Brand & Slogan */}
-        <h2 className="text-2xl font-bold tracking-wide">UniStore</h2>
+        <h2 className="text-2xl font-bold tracking-wide">Spacebook</h2>
         <p className="text-gray-200">
           Creating the future, one step at a time.
         </p>
@@ -51,7 +51,7 @@ const Footer: FC = () => {
 
         {/* Copyright */}
         <p className="text-sm text-gray-300 mt-3">
-          &copy; {new Date().getFullYear()} UniStore. All rights reserved.
+          &copy; {new Date().getFullYear()} Spacebook. All rights reserved.
         </p>
       </div>
     </footer>

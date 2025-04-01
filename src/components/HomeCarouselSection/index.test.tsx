@@ -2,9 +2,9 @@ import { render, screen } from '@testing-library/react';
 import { ComponentProps, ReactNode } from 'react';
 
 import productList from '@/constants/homePageProductList';
+import { Button } from '@/lib/components/Button';
 
-import HomeCarouselSection from '../HomeCarouselSection';
-import { Button } from '../Button';
+import HomeCarouselSection from '.';
 
 jest.mock('embla-carousel-autoplay', () =>
   jest.fn(() => ({
@@ -18,7 +18,7 @@ jest.mock('next/image', () => (props: ComponentProps<any>) => (
   <img {...props} alt="Product" />
 ));
 
-jest.mock('../Carousel', () => ({
+jest.mock('@/lib/components/Carousel', () => ({
   CarouselProvider: ({ children }: { children: ReactNode }) => (
     <div data-testid="carousel-provider">{children}</div>
   ),
@@ -40,8 +40,7 @@ jest.mock('../Carousel', () => ({
   )
 }));
 
-jest.mock('../Button', () => ({
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+jest.mock('@/lib/components/Button', () => ({
   Button: (props: ComponentProps<any>) => (
     <button data-testid="mock-button" {...props}>
       {props.children}

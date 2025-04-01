@@ -1,8 +1,8 @@
 #!/bin/bash
 
 # Script Vars
-REPO_URL="https://github.com/bonaxl015/unistore.git"
-APP_DIR=~/unistore
+REPO_URL="https://github.com/bonaxl015/spacebook.git"
+APP_DIR=~/spacebook
 
 # Pull the latest changes from the Git repository
 if [ -d "$APP_DIR" ]; then
@@ -15,7 +15,7 @@ else
   cd $APP_DIR
 fi
 
-# Build and restart the Docker containers from the app directory (~/unistore)
+# Build and restart the Docker containers from the app directory (~/spacebook)
 echo "Rebuilding and restarting Docker containers..."
 sudo docker-compose down
 sudo docker-compose up --build -d
