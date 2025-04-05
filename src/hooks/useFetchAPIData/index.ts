@@ -9,15 +9,17 @@ export default function useFetchAPIData<Data>(url: string | null) {
 
   const fetchAPI = useCallback(async () => {
     setIsLoading(true);
-    const responseData = await fetchAPIData(url)
+    fetchAPIData(url)
+      .then((responseData: Data) => {
+        setData(responseData);
+      })
       .catch((error: unknown) => {
+        setData(null);
         setError(error);
       })
       .finally(() => {
         setIsLoading(false);
       });
-
-    setData(responseData);
   }, [url]);
 
   useEffect(() => {

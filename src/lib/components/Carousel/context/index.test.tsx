@@ -4,8 +4,16 @@ import { useContext } from 'react';
 import CarouselContext from '../context';
 import { CarouselContextProps } from '../types';
 
+const mockCarouselRef = jest.fn();
+const mockScrollPrev = jest.fn();
+const mockScrollNext = jest.fn();
+
 const TestComponent = () => {
   const context = useContext(CarouselContext);
+
+  context.carouselRef(null);
+  context.scrollPrev();
+  context.scrollNext();
 
   return (
     <div>
@@ -20,14 +28,21 @@ const TestComponent = () => {
 };
 
 describe('Given CarouselContext', () => {
+  it('uses default context values when no provider is given', () => {
+    render(<TestComponent />);
+
+    expect(screen.getByTestId('canScrollPrev')).toHaveTextContent('false');
+    expect(screen.getByTestId('canScrollNext')).toHaveTextContent('false');
+  });
+
   it('provides default context values', () => {
     render(
       <CarouselContext.Provider
         value={{
-          carouselRef: () => {},
+          carouselRef: mockCarouselRef,
           api: {} as CarouselContextProps['api'],
-          scrollPrev: () => {},
-          scrollNext: () => {},
+          scrollPrev: mockScrollPrev,
+          scrollNext: mockScrollNext,
           canScrollPrev: false,
           canScrollNext: false
         }}
@@ -38,16 +53,19 @@ describe('Given CarouselContext', () => {
 
     expect(screen.getByTestId('canScrollPrev')).toHaveTextContent('false');
     expect(screen.getByTestId('canScrollNext')).toHaveTextContent('false');
+    expect(mockScrollPrev).toHaveBeenCalled();
+    expect(mockScrollNext).toHaveBeenCalled();
+    expect(mockCarouselRef).toHaveBeenCalled();
   });
 
   it('provides updated context values when passed', () => {
     render(
       <CarouselContext.Provider
         value={{
-          carouselRef: () => {},
+          carouselRef: mockCarouselRef,
           api: {} as CarouselContextProps['api'],
-          scrollPrev: () => {},
-          scrollNext: () => {},
+          scrollPrev: mockScrollPrev,
+          scrollNext: mockScrollNext,
           canScrollPrev: true,
           canScrollNext: true
         }}
@@ -58,5 +76,8 @@ describe('Given CarouselContext', () => {
 
     expect(screen.getByTestId('canScrollPrev')).toHaveTextContent('true');
     expect(screen.getByTestId('canScrollNext')).toHaveTextContent('true');
+    expect(mockScrollPrev).toHaveBeenCalled();
+    expect(mockScrollNext).toHaveBeenCalled();
+    expect(mockCarouselRef).toHaveBeenCalled();
   });
 });
