@@ -105,4 +105,36 @@ describe('Given CarouselProvider', () => {
 
     expect(mockApi.on).toHaveBeenCalledWith('select', expect.any(Function));
   });
+
+  it('does not call setApi when api is not available', () => {
+    const setApiMock = jest.fn();
+
+    (useEmblaCarousel as unknown as jest.Mock).mockReturnValue([
+      jest.fn(),
+      null
+    ]);
+
+    render(<CarouselProvider setApi={setApiMock} />);
+
+    expect(setApiMock).not.toHaveBeenCalled();
+  });
+
+  it('calls setApi when api is available', () => {
+    const setApiMock = jest.fn();
+    const mockApi: Partial<CarouselApi> = {
+      canScrollPrev: jest.fn(() => true),
+      canScrollNext: jest.fn(() => false),
+      on: jest.fn(),
+      off: jest.fn()
+    };
+
+    (useEmblaCarousel as unknown as jest.Mock).mockReturnValue([
+      jest.fn(),
+      mockApi
+    ]);
+
+    render(<CarouselProvider setApi={setApiMock} />);
+
+    expect(setApiMock).toHaveBeenCalledWith(mockApi);
+  });
 });
