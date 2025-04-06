@@ -57,7 +57,7 @@ describe('Given Footer component', () => {
     render(<Footer />);
     const footer = screen.getByRole('contentinfo');
     expect(footer).toHaveClass(
-      'bg-gradient-to-r from-red-500 to-pink-500 backdrop-blur-lg shadow-md text-white py-6'
+      'bg-gradient-to-b from-gray-900 to-indigo-900 backdrop-blur-lg shadow-md text-white py-6'
     );
   });
 });

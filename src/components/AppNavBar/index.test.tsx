@@ -39,7 +39,7 @@ describe('Given AppNavbar component', () => {
 
     const navbar = screen.getByRole('navigation');
     expect(navbar).toHaveClass(
-      'w-full bg-gradient-to-r from-red-500 to-pink-500 backdrop-blur-lg shadow-md'
+      'w-full bg-gradient-to-b from-gray-900 to-indigo-900 backdrop-blur-lg shadow-md'
     );
   });
 });
