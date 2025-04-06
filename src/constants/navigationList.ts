@@ -1,12 +1,17 @@
 export const navigationLinks = [
   {
-    key: 'home',
-    href: '/',
-    label: 'Home'
+    key: 'login',
+    href: '/login',
+    label: 'Login'
   },
   {
-    key: 'about',
-    href: '/about',
-    label: 'About'
+    key: 'register',
+    href: '/register',
+    label: 'Register'
+  },
+  {
+    key: 'posts',
+    href: '/posts',
+    label: 'Posts'
   }
 ];

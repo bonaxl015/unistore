@@ -24,7 +24,7 @@ const Footer: FC = () => {
   return (
     <footer
       aria-label="Footer"
-      className="bg-gradient-to-r from-red-500 to-pink-500 backdrop-blur-lg shadow-md text-white py-6"
+      className="bg-gradient-to-b from-gray-900 to-indigo-900 backdrop-blur-lg shadow-md text-white py-6"
     >
       <div className="container mx-auto flex flex-col items-center space-y-4">
         {/* Brand & Slogan */}
