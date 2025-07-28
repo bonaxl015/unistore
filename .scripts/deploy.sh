@@ -10,8 +10,8 @@ DOMAIN_NAME="nextselfhost.dev"
 EMAIL="your-email@example.com"
 
 # Script Vars
-REPO_URL="https://github.com/bonaxl015/spacebook.git"
-APP_DIR=~/spacebook
+REPO_URL="https://github.com/bonaxl015/unistore.git"
+APP_DIR=~/unistore
 SWAP_SIZE="1G"  # Swap size of 1GB
 
 # Update package list and upgrade existing packages
@@ -76,7 +76,7 @@ DATABASE_URL="postgres://$POSTGRES_USER:$POSTGRES_PASSWORD@db:5432/$POSTGRES_DB"
 # For external tools (like Drizzle Studio)
 DATABASE_URL_EXTERNAL="postgres://$POSTGRES_USER:$POSTGRES_PASSWORD@localhost:5432/$POSTGRES_DB"
 
-# Create the .env file inside the app directory (~/spacebook/.env)
+# Create the .env file inside the app directory (~/unistore/.env)
 echo "POSTGRES_USER=$POSTGRES_USER" > "$APP_DIR/.env"
 echo "POSTGRES_PASSWORD=$POSTGRES_PASSWORD" >> "$APP_DIR/.env"
 echo "POSTGRES_DB=$POSTGRES_DB" >> "$APP_DIR/.env"
@@ -91,8 +91,8 @@ echo "NEXT_PUBLIC_SAFE_KEY=$NEXT_PUBLIC_SAFE_KEY" >> "$APP_DIR/.env"
 sudo apt install nginx -y
 
 # Remove old Nginx config (if it exists)
-sudo rm -f /etc/nginx/sites-available/spacebook
-sudo rm -f /etc/nginx/sites-enabled/spacebook
+sudo rm -f /etc/nginx/sites-available/unistore
+sudo rm -f /etc/nginx/sites-enabled/unistore
 
 # Stop Nginx temporarily to allow Certbot to run in standalone mode
 sudo systemctl stop nginx
@@ -111,7 +111,7 @@ if [ ! -f /etc/letsencrypt/ssl-dhparams.pem ]; then
 fi
 
 # Create Nginx config with reverse proxy, SSL support, rate limiting, and streaming support
-sudo cat > /etc/nginx/sites-available/spacebook <<EOL
+sudo cat > /etc/nginx/sites-available/unistore <<EOL
 limit_req_zone \$binary_remote_addr zone=mylimit:10m rate=10r/s;
 
 server {
@@ -150,12 +150,12 @@ server {
 EOL
 
 # Create symbolic link if it doesn't already exist
-sudo ln -s /etc/nginx/sites-available/spacebook /etc/nginx/sites-enabled/spacebook
+sudo ln -s /etc/nginx/sites-available/unistore /etc/nginx/sites-enabled/unistore
 
 # Restart Nginx to apply the new configuration
 sudo systemctl restart nginx
 
-# Build and run the Docker containers from the app directory (~/spacebook)
+# Build and run the Docker containers from the app directory (~/unistore)
 cd $APP_DIR
 sudo docker-compose up --build -d
 

@@ -19,7 +19,7 @@ jest.mock(
 describe('Given AppNavbar component', () => {
   it('renders the brand name', () => {
     render(<AppNavbar />);
-    expect(screen.getByText('Spacebook')).toBeInTheDocument();
+    expect(screen.getByText('UniStore')).toBeInTheDocument();
   });
 
   it('renders all navigation links', () => {

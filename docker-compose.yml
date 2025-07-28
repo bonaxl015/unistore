@@ -8,7 +8,7 @@ services:
     depends_on:
       - db
     networks:
-      - spacebook_network
+      - unistore_network
 
   db:
     image: postgres:latest
@@ -21,7 +21,7 @@ services:
     volumes:
       - postgres_data:/var/lib/postgresql/data
     networks:
-      - spacebook_network
+      - unistore_network
 
   cron:
     image: alpine/curl
@@ -33,12 +33,12 @@ services:
     depends_on:
       - web
     networks:
-      - spacebook_network
+      - unistore_network
 
 volumes:
   postgres_data:
 
 networks:
-  spacebook_network:
-    name: spacebook_network
+  unistore_network:
+    name: unistore_network
     driver: bridge

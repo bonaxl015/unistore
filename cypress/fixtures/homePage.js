@@ -1,3 +1,3 @@
 export const homePageData = {
-  sectionText: 'Welcome to Spacebook'
+  sectionText: 'Welcome to UniStore'
 };

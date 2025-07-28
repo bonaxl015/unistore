@@ -1,7 +1,7 @@
 import homePage from './homePage';
 
-const spacebook = {
+const unistore = {
   homePage
 };
 
-export default spacebook;
+export default unistore;

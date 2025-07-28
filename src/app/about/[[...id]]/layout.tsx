@@ -8,7 +8,7 @@ interface AboutLayoutProps {
 }
 
 export const metadata: Metadata = {
-  title: 'About | Spacebook'
+  title: 'About | Unistore'
 };
 
 const AboutLayout: FC<AboutLayoutProps> = ({ children }) => {

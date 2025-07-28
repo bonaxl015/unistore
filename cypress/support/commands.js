@@ -1,3 +1,3 @@
-Cypress.Commands.add('loadSpacebook', () => {
+Cypress.Commands.add('loadUnistore', () => {
   cy.visit('http://localhost:3000');
 });

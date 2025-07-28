@@ -4,7 +4,7 @@ import { ArrowRight } from 'lucide-react';
 import { ComponentProps } from 'react';
 
 import { cn } from '@/utils';
-import { Button } from '@/lib/components/Button';
+import { Button } from '@/components/Button';
 
 import useCarousel from '../hooks/useCarousel';
 
