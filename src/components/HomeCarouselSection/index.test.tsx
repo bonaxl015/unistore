@@ -1,10 +1,10 @@
 import { render, screen } from '@testing-library/react';
 import { ComponentProps, ReactNode } from 'react';
 
+import productList from '@/constants/homePageProductList';
+
 import HomeCarouselSection from '../HomeCarouselSection';
 import { Button } from '../Button';
-
-import productList from '@/constants/homePageProductList';
 
 jest.mock('embla-carousel-autoplay', () =>
   jest.fn(() => ({

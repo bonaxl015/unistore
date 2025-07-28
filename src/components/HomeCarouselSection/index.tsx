@@ -4,6 +4,8 @@ import { FC, useRef } from 'react';
 import Autoplay from 'embla-carousel-autoplay';
 import Image from 'next/image';
 
+import productList from '@/constants/homePageProductList';
+
 import styles from './styles.module.css';
 
 import {
@@ -14,8 +16,6 @@ import {
   CarouselPrevious
 } from '../Carousel';
 import { Button } from '../Button';
-
-import productList from '@/constants/homePageProductList';
 
 const HomeCarouselSection: FC = () => {
   const plugin = useRef(Autoplay({ delay: 2000 }));
