@@ -35,10 +35,8 @@ const HomeCarouselSection: FC = () => {
                 <Image
                   src={product.imageUrl}
                   alt="Product"
-                  width={9}
-                  height={16}
-                  layout="responsive"
-                  objectFit="cover"
+                  width={400}
+                  height={100}
                   className={`rounded-md ${styles.cardImage}`}
                 />
               </div>
