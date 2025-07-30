@@ -1,10 +1,11 @@
 import { render, screen } from '@testing-library/react';
 import { ComponentProps, ReactNode } from 'react';
 
+import { ImageLoaderProps } from 'next/image';
+
 import productList from '@/constants/homePageProductList';
 
 import HomeCarouselSection from '../HomeCarouselSection';
-import { Button } from '../Button';
 
 jest.mock('embla-carousel-autoplay', () =>
   jest.fn(() => ({
@@ -13,7 +14,7 @@ jest.mock('embla-carousel-autoplay', () =>
   }))
 );
 
-jest.mock('next/image', () => (props: ComponentProps<any>) => (
+jest.mock('next/image', () => (props: ImageLoaderProps) => (
   // eslint-disable-next-line @next/next/no-img-element
   <img {...props} alt="Product" />
 ));
@@ -28,12 +29,12 @@ jest.mock('../Carousel', () => ({
   CarouselItem: ({ children }: { children: ReactNode }) => (
     <div data-testid="carousel-item">{children}</div>
   ),
-  CarouselNext: (props: ComponentProps<typeof Button>) => (
+  CarouselNext: (props: ComponentProps<'button'>) => (
     <button data-testid="carousel-next" {...props}>
       Next
     </button>
   ),
-  CarouselPrevious: (props: ComponentProps<typeof Button>) => (
+  CarouselPrevious: (props: ComponentProps<'button'>) => (
     <button data-testid="carousel-previous" {...props}>
       Previous
     </button>
@@ -41,8 +42,7 @@ jest.mock('../Carousel', () => ({
 }));
 
 jest.mock('../Button', () => ({
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  Button: (props: ComponentProps<any>) => (
+  Button: (props: ComponentProps<'button'>) => (
     <button data-testid="mock-button" {...props}>
       {props.children}
     </button>

@@ -33,6 +33,7 @@ const eslintConfig = [
       'testing-library/prefer-screen-queries': 'off',
       '@typescript-eslint/no-empty-function': 'off',
       '@typescript-eslint/no-explicit-any': 'warn',
+      '@typescript-eslint/no-require-imports': 'off',
       'import/order': [
         'error',
         {
