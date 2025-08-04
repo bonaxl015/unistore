@@ -6,3 +6,7 @@ global.console = {
   error: jest.fn(),
   warn: jest.fn()
 };
+
+global.TextEncoder = jest.fn().mockImplementation(() => ({
+  encode: jest.fn()
+}));

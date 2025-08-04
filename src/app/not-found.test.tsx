@@ -13,7 +13,7 @@ jest.mock('next/link', () => ({
   }) => <a href={href}>{children}</a>
 }));
 
-jest.mock('@/components/Button', () => ({
+jest.mock('@/components/ui/button', () => ({
   Button: ({ children }: { children: React.ReactNode }) => (
     <button>{children}</button>
   )

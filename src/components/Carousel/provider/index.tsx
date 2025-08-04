@@ -8,7 +8,7 @@ import {
 
 import useEmblaCarousel from 'embla-carousel-react';
 
-import { cn } from '@/utils';
+import { cn } from '@/lib/utils/cn';
 
 import { CarouselApi, CarouselProps } from '../types';
 import CarouselContext from '../context';

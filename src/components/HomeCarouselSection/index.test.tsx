@@ -41,7 +41,7 @@ jest.mock('../Carousel', () => ({
   )
 }));
 
-jest.mock('../Button', () => ({
+jest.mock('@/components/ui/button', () => ({
   Button: (props: ComponentProps<'button'>) => (
     <button data-testid="mock-button" {...props}>
       {props.children}

@@ -1,6 +1,6 @@
 import { FC } from 'react';
 
-import { Button } from '@/components/Button';
+import { Button } from '@/components/ui/button';
 import HomeCarouselSection from '@/components/HomeCarouselSection';
 
 const homeBackgroundImage =

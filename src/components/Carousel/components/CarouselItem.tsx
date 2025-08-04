@@ -2,7 +2,7 @@
 
 import { ComponentProps } from 'react';
 
-import { cn } from '@/utils';
+import { cn } from '@/lib/utils/cn';
 
 import useCarousel from '../hooks/useCarousel';
 

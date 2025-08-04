@@ -3,8 +3,8 @@
 import { ArrowRight } from 'lucide-react';
 import { ComponentProps } from 'react';
 
-import { cn } from '@/utils';
-import { Button } from '@/components/Button';
+import { cn } from '@/lib/utils/cn';
+import { Button } from '@/components/ui/button';
 
 import useCarousel from '../hooks/useCarousel';
 
