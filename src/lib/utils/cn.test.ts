@@ -1,4 +1,4 @@
-import { cn } from '.';
+import { cn } from './cn';
 
 describe('Given cn function', () => {
   it('should merge tailwind classes correctly', () => {

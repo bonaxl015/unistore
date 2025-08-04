@@ -1,11 +1,11 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
 
-import { cn } from '@/utils';
+import { cn } from '@/lib/utils/cn';
 
-import { Button } from '.';
+import { Button } from './button';
 
-jest.mock('@/utils', () => ({
+jest.mock('@/lib/utils/cn', () => ({
   cn: jest.fn((...classes) => classes.filter(Boolean).join(' '))
 }));
 

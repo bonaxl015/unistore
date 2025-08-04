@@ -1,4 +1,3 @@
-import { ReactNode } from 'react';
 import type { Metadata } from 'next';
 import { Poppins } from 'next/font/google';
 import '../styles/globals.css';
@@ -6,10 +5,14 @@ import '../styles/globals.css';
 import AppNavbar from '@/components/AppNavBar';
 import AppBody from '@/components/AppBody';
 import AppFooter from '@/components/AppFooter';
+import { WithChildren } from '@/types';
 
 export const metadata: Metadata = {
-  title: 'Home | Unistore',
-  description: 'Unistore home page'
+  title: {
+    template: `%s | Unistore`,
+    default: 'Unistore'
+  },
+  description: 'A modern e-commerce platform'
 };
 
 const poppins = Poppins({
@@ -17,11 +20,9 @@ const poppins = Poppins({
   subsets: ['latin']
 });
 
-export default function RootLayout({
-  children
-}: Readonly<{
-  children?: ReactNode;
-}>) {
+interface IRootLayput extends WithChildren {}
+
+export default function RootLayout({ children }: IRootLayput) {
   return (
     <html lang="en">
       <body className={poppins.className}>
