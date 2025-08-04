@@ -8,10 +8,5 @@ export const navigationLinks = [
     key: 'register',
     href: '/register',
     label: 'Register'
-  },
-  {
-    key: 'posts',
-    href: '/posts',
-    label: 'Posts'
   }
 ];
