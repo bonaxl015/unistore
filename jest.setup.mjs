@@ -1,4 +1,5 @@
 import '@testing-library/jest-dom';
+import { TextEncoder } from 'util';
 
 global.console = {
   ...console,
@@ -7,6 +8,6 @@ global.console = {
   warn: jest.fn()
 };
 
-global.TextEncoder = jest.fn().mockImplementation(() => ({
-  encode: jest.fn()
-}));
+global.TextEncoder = TextEncoder;
+
+// global.crypto = crypto;
