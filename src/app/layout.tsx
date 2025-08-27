@@ -1,11 +1,8 @@
 import type { Metadata } from 'next';
 import { Poppins } from 'next/font/google';
-import '../styles/globals.css';
 
-import AppNavbar from '@/components/AppNavBar';
-import AppBody from '@/components/AppBody';
-import AppFooter from '@/components/AppFooter';
 import { WithChildren } from '@/types';
+import '../styles/globals.css';
 
 export const metadata: Metadata = {
   title: {
@@ -27,9 +24,7 @@ export default function RootLayout({ children }: IRootLayput) {
     <html lang="en">
       <body className={poppins.className}>
         <div aria-label="Home Layout" className="min-h-screen flex flex-col">
-          <AppNavbar />
-          <AppBody>{children}</AppBody>
-          <AppFooter />
+          {children}
         </div>
       </body>
     </html>
